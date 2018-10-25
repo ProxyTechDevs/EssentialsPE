@@ -1,9 +1,6 @@
 <?php
-
 declare(strict_types = 1);
-
 namespace EssentialsPE;
-
 use EssentialsPE\BaseFiles\BaseAPI;
 use EssentialsPE\BaseFiles\BaseCommand;
 use EssentialsPE\Commands\AFK;
