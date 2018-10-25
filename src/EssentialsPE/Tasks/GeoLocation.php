@@ -1,9 +1,6 @@
 <?php
-
 declare(strict_types = 1);
-
 namespace EssentialsPE\Tasks;
-
 use EssentialsPE\Loader;
 use pocketmine\Player;
 use pocketmine\scheduler\AsyncTask;
