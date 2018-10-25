@@ -1,9 +1,6 @@
 <?php
-
 declare(strict_types = 1);
-
 namespace EssentialsPE\Tasks\AFK;
-
 use EssentialsPE\BaseFiles\BaseTask;
 use EssentialsPE\BaseFiles\BaseAPI;
 use pocketmine\utils\TextFormat;
@@ -31,7 +28,7 @@ class AFKSetterTask extends BaseTask{
      * @param int $currentTick
      */
     public function onRun(int $currentTick): void{
-        $this->getAPI()->getServer()->getLogger()->debug(TextFormat::YELLOW . "Running EssentialsPE's AFKSetterTask");
+        $this->getAPI()->getServer()->getLogger()->debug(TextFormat::YELLOW . "Running EssentialsPE AFKSetterTask");
         foreach($this->getAPI()->getServer()->getOnlinePlayers() as $p){
             if(!$this->getAPI()->isAFK($p) && ($last = $this->getAPI()->getLastPlayerMovement($p)) !== null && !$p->hasPermission("essentials.afk.preventauto")){
                 if(time() - $last >= $this->getAPI()->getEssentialsPEPlugin()->getConfig()->getNested("afk.auto-set")){
