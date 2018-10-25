@@ -1,9 +1,6 @@
 <?php
-
 declare(strict_types = 1);
-
 namespace EssentialsPE\Tasks;
-
 use EssentialsPE\BaseFiles\BaseTask;
 use EssentialsPE\BaseFiles\BaseAPI;
 use pocketmine\Player;
@@ -27,8 +24,8 @@ class TPRequestTask extends BaseTask{
      */
     public function onRun(int $currentTick): void{
         if($this->requester instanceof Player && $this->requester->isOnline()) {
-            $this->getAPI()->getServer()->getLogger()->debug(TextFormat::YELLOW . "Running EssentialsPE's TPRequestTask");
+            $this->getAPI()->getServer()->getLogger()->debug("");
             $this->getAPI()->removeTPRequest($this->requester);
         }
     }
-} 
+}
