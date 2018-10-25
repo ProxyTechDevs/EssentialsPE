@@ -380,7 +380,7 @@ permissions:
                                 description: ""
                             essentials.sign.create.repair:
                                 default: false
-                                description: "
+                                description: ""
                             essentials.sign.create.time:
                                 default: false
                                 description: ""
